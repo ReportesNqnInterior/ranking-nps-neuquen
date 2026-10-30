@@ -1,0 +1,382 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Ranking NPS · Neuquén</title><style>:root{--navy:#14243a;--blue:#203b5c;--cyan:#27b8cf;--green:#d9f2df;--green2:#187844;--red:#fbe0e3;--red2:#a42d3b;--amber:#fff1cb;--ink:#203044;--muted:#64748b;--line:#d8e0e9;--bg:#f2f5f9}*{box-sizing:border-box}body{margin:0;background:var(--bg);font:14px/1.45 'Segoe UI',Arial,sans-serif;color:var(--ink)}.header{background:linear-gradient(115deg,#14243a,#203b5c);color:#fff;padding:28px max(20px,calc((100vw - 1440px)/2));border-bottom:5px solid var(--cyan)}.eyebrow{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#8ee8ed;font-weight:800}.headrow{display:flex;justify-content:space-between;gap:20px;align-items:center}.header h1{margin:5px 0;font-size:clamp(24px,3vw,36px)}.header p{margin:6px 0 0;color:#c9d7e7}.period{border:1px solid #58718d;border-radius:12px;padding:10px 14px;white-space:nowrap;font-weight:700}.wrap{max-width:1440px;margin:auto;padding:22px 20px 42px}.topcards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:17px;box-shadow:0 4px 15px #18314b0b}.klabel{font-size:12px;color:var(--muted);font-weight:700}.kvalue{font-size:29px;font-weight:800;letter-spacing:-.04em;margin:4px 0}.kfoot{font-size:12px;color:var(--muted)}.filters{display:flex;align-items:end;gap:12px;flex-wrap:wrap;margin:20px 0}.field{display:flex;flex-direction:column;gap:5px}.field label{font-size:12px;font-weight:800;color:#52657a}.field select,.field input{height:40px;border:1px solid #cad5e1;border-radius:9px;padding:0 12px;background:white;color:var(--ink);font:inherit;min-width:170px}.btn{height:40px;border:0;border-radius:9px;padding:0 15px;font-weight:800;cursor:pointer;background:var(--blue);color:white}.btn.alt{background:white;color:var(--blue);border:1px solid #cad5e1}.sectiontitle{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:24px 0 12px}.sectiontitle h2{margin:0;font-size:19px}.sectiontitle span{color:var(--muted);font-size:12px}.tablewrap{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:auto;box-shadow:0 4px 15px #18314b0b}table{width:100%;border-collapse:collapse;min-width:1050px;font-variant-numeric:tabular-nums}thead tr.group th{background:#dce7f1;color:#203b5c;text-align:center;font-size:11px;text-transform:uppercase;letter-spacing:.04em;padding:9px;border-bottom:1px solid #c5d3e1}thead tr.labels th{background:#203b5c;color:#fff;text-align:right;padding:11px 9px;font-size:11px;white-space:nowrap}thead tr.labels th:first-child,thead tr.labels th:nth-child(2){text-align:left}tbody td{padding:10px 9px;border-bottom:1px solid #e7edf3;text-align:right;white-space:nowrap}tbody td:first-child,tbody td:nth-child(2){text-align:left}tbody tr:hover{background:#f5f9fc}.code{font-weight:900;color:#203b5c}.pill{display:inline-block;padding:4px 8px;border-radius:6px;font-size:11px;font-weight:800}.positive{background:var(--green);color:var(--green2)}.negative{background:var(--red);color:var(--red2)}.neutral{background:#edf1f5;color:#586779}.status{font-size:11px;font-weight:800;border-radius:6px;padding:4px 7px;display:inline-block}.status.ok{background:#e1f4e8;color:#187844}.status.out{background:var(--amber);color:#8b5c00}.rankbar{height:6px;width:95px;background:#e8eef4;border-radius:20px;overflow:hidden;margin-left:auto}.rankbar span{display:block;height:100%;background:#27a56d}.legend{display:flex;gap:16px;flex-wrap:wrap;color:var(--muted);font-size:12px;margin:12px 2px}.dot{display:inline-block;width:9px;height:9px;border-radius:3px;margin-right:5px}.bottom{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px}.insight{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px}.insight h3{margin:0 0 12px;font-size:15px}.barrow{display:grid;grid-template-columns:45px 1fr 55px;gap:10px;align-items:center;margin:10px 0;font-size:12px}.bartrack{height:10px;background:#edf1f5;border-radius:20px;overflow:hidden}.barfill{height:100%;border-radius:20px;background:#27a56d}.barfill.low{background:#d95c65}.small{font-size:12px;color:var(--muted)}footer{text-align:center;color:#78879a;font-size:11px;margin:22px 0 0}.empty{padding:28px;text-align:center;color:var(--muted)}@media(max-width:850px){.topcards{grid-template-columns:repeat(2,minmax(0,1fr))}.headrow{align-items:flex-start;flex-direction:column}.bottom{grid-template-columns:1fr}.wrap{padding:16px 10px}.header{padding:22px 16px}.period{white-space:normal}}@media(max-width:430px){.topcards{grid-template-columns:1fr 1fr}.kvalue{font-size:24px}.field select,.field input{min-width:135px}}
+
+/* Variación: mismo criterio visual, centrado y con divisores por grupo */
+#pane-variacion table{border-collapse:separate;border-spacing:0;}
+#pane-variacion thead tr.group th{border-top:2px solid #9aafc3;border-bottom:2px solid #9aafc3;padding:12px 10px;background:#e3edf6;text-align:center!important;}
+#pane-variacion thead tr.group th:first-child{border-left:2px solid #9aafc3;border-radius:8px 0 0 0;}
+#pane-variacion thead tr.group th:last-child{border-right:2px solid #9aafc3;border-radius:0 8px 0 0;}
+#pane-variacion thead tr.labels th{border-bottom:2px solid #9aafc3;text-align:center!important;}
+#pane-variacion tbody td{padding:12px 9px;text-align:center!important;}
+#pane-variacion thead tr.labels th:nth-child(1),#pane-variacion tbody td:nth-child(1){border-left:2px solid #b6c6d6;}
+#pane-variacion thead tr.labels th:nth-child(3),#pane-variacion tbody td:nth-child(3){border-right:2px solid #9aafc3;}
+#pane-variacion thead tr.labels th:nth-child(4),#pane-variacion tbody td:nth-child(4){border-left:2px solid #9aafc3;}
+#pane-variacion thead tr.labels th:nth-child(5),#pane-variacion tbody td:nth-child(5){border-right:2px solid #9aafc3;}
+#pane-variacion thead tr.labels th:nth-child(6),#pane-variacion tbody td:nth-child(6){border-left:2px solid #9aafc3;}
+#pane-variacion thead tr.labels th:nth-child(7),#pane-variacion tbody td:nth-child(7){border-right:2px solid #9aafc3;}
+#pane-variacion thead tr.labels th:nth-child(8),#pane-variacion tbody td:nth-child(8){border-left:2px solid #9aafc3;}
+#pane-variacion thead tr.labels th:nth-child(9),#pane-variacion tbody td:nth-child(9){border-right:2px solid #9aafc3;}
+#pane-variacion tbody td .pill{margin-inline:auto;}
+
+
+/* Gráficos en paleta oscura teal/azul, como el dashboard de referencia */
+.chart-card{background:linear-gradient(145deg,#06243a 0%,#0a344a 100%);border:1px solid #087b91;box-shadow:0 8px 24px rgba(0,20,35,.22);color:#e8f5fb}
+.chart-head h3{color:#f2fbff}.chart-head p,.chart-head .small{color:#9fc8d8}
+.chart-code{color:#d9f2fa}.chart-track{background:rgba(116,169,190,.13);border:1px solid rgba(75,178,198,.16);border-radius:3px}
+.chart-fill{background:#35c6b0;opacity:.95;border-radius:2px}.chart-fill.neg{background:#f06d75}
+.chart-track.diverging{background:linear-gradient(to right,transparent 49.8%,#d1edf3 49.8%,#d1edf3 50.2%,transparent 50.2%),rgba(116,169,190,.10)}
+.chart-val{color:#dff6fb}.chart-empty{color:#b8d8e4}
+
+
+/* Ranking vertical; variación horizontal */
+.chart-list.horizontal-bars{display:grid;grid-template-columns:1fr;gap:10px;padding:16px 18px 8px;}
+.hbar-row{display:grid;grid-template-columns:54px minmax(80px,1fr) 64px;gap:12px;align-items:center;min-height:24px;transition:opacity .2s,filter .2s;}
+.hbar-code{font-size:12px;font-weight:800;text-align:center;color:#d8f2fa;}
+.hbar-track{height:14px;position:relative;overflow:hidden;border-radius:4px;background:rgba(116,169,190,.13);}
+.hbar-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,#38cdbb,#168e9c);transition:width .25s;}
+.hbar-fill.under-threshold{background:linear-gradient(90deg,#f4c56a,#d98b2b)!important;}
+.hbar-fill.negative{background:linear-gradient(90deg,#f27b83,#c84d65)!important;}
+.hbar-track.diverging{background:linear-gradient(to right,transparent 49.7%,rgba(205,235,241,.72) 49.7%,rgba(205,235,241,.72) 50.3%,transparent 50.3%),rgba(116,169,190,.13);}
+.hbar-row .hbar-fill.positive{background:linear-gradient(90deg,#38cdbb,#168e9c);}
+.hbar-value{font-size:12px;text-align:center;color:#d7edf6;font-variant-numeric:tabular-nums;}
+.hbar-row.dimmed,.vbar-item.dimmed{opacity:.22;filter:saturate(.35);}
+.hbar-row.selected{background:rgba(56,205,187,.08);border-radius:7px;outline:1px solid rgba(125,245,230,.55);}
+.hbar-row.selected .hbar-code,.hbar-row.selected .hbar-value{color:#69f0de;}
+.chart-list.variation-bars{display:grid;grid-template-columns:repeat(auto-fit,minmax(54px,1fr));align-items:stretch;gap:9px;min-height:285px;padding:14px 8px 6px;border-bottom:1px solid rgba(91,181,202,.28);}
+.variation-bars .vbar-item{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;min-width:0;gap:6px;transition:opacity .2s,filter .2s,transform .2s;}
+.variation-bars .vbar-value{font-size:11px;font-weight:700;color:#d7edf6;min-height:16px;white-space:nowrap;}
+.variation-bars .vbar-value.neg-label{color:#ff7d86;}
+.variation-plot{height:220px;width:100%;position:relative;overflow:hidden;background:repeating-linear-gradient(to bottom,transparent 0,transparent 52px,rgba(125,184,204,.08) 53px,transparent 54px);}
+.zero-line{position:absolute;top:50%;left:0;right:0;height:2px;background:rgba(199,233,238,.72);z-index:2;}
+.variation-bar{position:absolute;left:50%;transform:translateX(-50%);width:min(68%,42px);min-width:12px;border-radius:4px 4px 1px 1px;background:linear-gradient(180deg,#38cdbb,#168e9c);transition:height .25s,opacity .2s;}
+.variation-bar.negative{border-radius:1px 1px 4px 4px;background:linear-gradient(180deg,#f27b83,#c84d65);}
+.variation-bar.under-threshold{background:linear-gradient(180deg,#f4c56a,#d98b2b)!important;}
+.variation-bars .vbar-code{font-size:12px;font-weight:800;color:#d8f2fa;white-space:nowrap;}
+.variation-bars .vbar-item.selected{transform:translateY(-2px);}
+.variation-bars .vbar-item.selected .variation-bar{filter:drop-shadow(0 0 7px rgba(56,205,187,.48));outline:1px solid #7df5e6;outline-offset:2px;}
+.variation-bars .vbar-item.selected .vbar-code{color:#69f0de;}
+@media(max-width:850px){.chart-list.variation-bars{grid-template-columns:repeat(auto-fit,minmax(42px,1fr));gap:5px}.variation-plot{height:170px}.hbar-row{grid-template-columns:42px minmax(70px,1fr) 52px;gap:7px}}
+
+
+/* Ajuste de contraste del gráfico de variación: barras claramente visibles sobre fondo oscuro */
+.hbar-fill.positive{background:linear-gradient(90deg,#31d8bd,#28b7a8)!important;box-shadow:0 0 5px rgba(49,216,189,.18)!important}
+.hbar-fill.negative{background:linear-gradient(90deg,#ff737d,#ed596b)!important;box-shadow:0 0 5px rgba(255,115,125,.16)!important}
+.hbar-fill.under-threshold{background:linear-gradient(90deg,#ffd166,#f0a52f)!important;box-shadow:0 0 5px rgba(255,209,102,.18)!important}
+.hbar-track.diverging{background:linear-gradient(to right,transparent 49.7%,#b9e8ef 49.7%,#b9e8ef 50.3%,transparent 50.3%),rgba(116,169,190,.16)!important}
+
+
+.uploadbox{display:flex;align-items:center;gap:16px;flex-wrap:wrap;background:#fff;border:1px solid #d8e0e9;border-left:5px solid #1d6f91;border-radius:10px;padding:14px 18px;margin:20px 0}
+.uploadbox p{margin:3px 0 0;color:#64748b;font-size:12px}.uploadbox #uploadStatus{font-size:12px;color:#187844;margin-left:auto}
+.regiontops[hidden]{display:none!important}.regiontops{display:grid;grid-template-columns:repeat(5,minmax(140px,1fr));gap:14px;margin:18px 0 24px}
+.regiontop{border:1px solid #d7e1eb;background:linear-gradient(180deg,#fff,#f8fafc);text-align:center;font-size:12px;border-radius:14px;overflow:hidden;box-shadow:0 5px 14px #18314b0d;padding-bottom:9px}.regiontop>b{display:block;background:#203b5c;color:#fff;padding:9px 5px;font-size:11px;letter-spacing:.035em}.regiontop>div,.regiontop section{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:7px 10px 0}.regiontop>div{background:transparent;font-weight:800;color:#64748b;font-size:10px;letter-spacing:.08em}.regiontop>div span:first-child{color:#187844}.regiontop>div span:last-child{color:#b42332}.regiontop section strong,.regiontop section em{font-style:normal;padding:6px 4px;border-radius:8px;font-weight:900;display:block;border:1px solid transparent;transition:transform .15s ease,box-shadow .15s ease}.regiontop section strong{background:#dff5e5;color:#176b38;border-color:#b8e6c4}.regiontop section em{background:#fde7e4;color:#a52d35;border-color:#f7c9c4}.regiontop section strong:hover,.regiontop section em:hover{transform:translateY(-1px);box-shadow:0 3px 8px #18314b18}
+table{min-width:1150px}.group th{font-size:11px;line-height:1.25;white-space:normal;vertical-align:middle;padding:9px 6px}.labels th{font-size:11px;white-space:nowrap}
+@media(max-width:900px){.regiontops{grid-template-columns:repeat(2,minmax(140px,1fr))}.uploadbox #uploadStatus{margin-left:0}}
+.tabbar{display:flex;gap:6px;border-bottom:2px solid #cbd6e2;margin-top:24px}.tab{border:1px solid #cbd6e2;border-bottom:0;background:#e7edf4;color:#203b5c;padding:11px 24px;border-radius:9px 9px 0 0;font-weight:800;cursor:pointer}.tab.active{background:#203b5c;color:#fff}.tabpane{display:none}.tabpane.active{display:block}
+@media(max-width:600px){.regiontops{grid-template-columns:repeat(2,minmax(0,1fr))}.regiontop>b{font-size:10px}}
+
+/* Separadores visuales de los bloques de indicadores */
+#pane-ranking table, #pane-variacion table{border-collapse:separate;border-spacing:0;}
+#pane-ranking thead tr.group th, #pane-variacion thead tr.group th{border-top:2px solid #9aafc3;border-bottom:2px solid #9aafc3;padding-top:12px;padding-bottom:12px;background:#e3edf6;}
+#pane-ranking thead tr.group th:first-child, #pane-variacion thead tr.group th:first-child{border-left:2px solid #9aafc3;border-radius:8px 0 0 0;}
+#pane-ranking thead tr.group th:last-child, #pane-variacion thead tr.group th:last-child{border-right:2px solid #9aafc3;border-radius:0 8px 0 0;}
+#pane-ranking thead tr.labels th, #pane-variacion thead tr.labels th{border-bottom:2px solid #9aafc3;}
+/* Ranking: separa identificación, trimestre actual, trimestre anterior, variaciones y comparación anual */
+#pane-ranking thead tr.labels th:nth-child(1),#pane-ranking tbody td:nth-child(1){border-left:2px solid #b6c6d6;}
+#pane-ranking thead tr.labels th:nth-child(3),#pane-ranking tbody td:nth-child(3){border-right:2px solid #b6c6d6;}
+#pane-ranking thead tr.labels th:nth-child(4),#pane-ranking tbody td:nth-child(4){border-left:2px solid #9aafc3;}
+#pane-ranking thead tr.labels th:nth-child(5),#pane-ranking tbody td:nth-child(5){border-right:2px solid #9aafc3;}
+#pane-ranking thead tr.labels th:nth-child(6),#pane-ranking tbody td:nth-child(6){border-left:2px solid #9aafc3;}
+#pane-ranking thead tr.labels th:nth-child(7),#pane-ranking tbody td:nth-child(7){border-right:2px solid #9aafc3;}
+#pane-ranking thead tr.labels th:nth-child(8),#pane-ranking tbody td:nth-child(8),#pane-ranking thead tr.labels th:nth-child(9),#pane-ranking tbody td:nth-child(9){border-left:2px solid #9aafc3;}
+#pane-ranking thead tr.labels th:nth-child(9),#pane-ranking tbody td:nth-child(9){border-right:2px solid #9aafc3;}
+#pane-ranking thead tr.labels th:nth-child(10),#pane-ranking tbody td:nth-child(10){border-left:2px solid #9aafc3;}
+#pane-ranking thead tr.labels th:nth-child(11),#pane-ranking tbody td:nth-child(11){border-right:2px solid #9aafc3;}
+#pane-ranking thead tr.labels th:nth-child(12),#pane-ranking tbody td:nth-child(12){border-left:2px solid #9aafc3;border-right:2px solid #9aafc3;}
+#pane-ranking tbody tr:last-child td{border-bottom:1px solid #d8e0e9;}
+#pane-ranking tbody td{padding-top:12px;padding-bottom:12px;}
+@media(max-width:850px){#pane-ranking tbody td{padding:10px 7px}}
+
+/* Centrar los indicadores de variación y evitar que queden pegados al borde derecho */
+#pane-ranking thead tr.group th:nth-child(4),
+#pane-ranking thead tr.group th:nth-child(5),
+#pane-ranking thead tr.labels th:nth-child(8),
+#pane-ranking thead tr.labels th:nth-child(9),
+#pane-ranking tbody td:nth-child(8),
+#pane-ranking tbody td:nth-child(9){text-align:center!important;}
+#pane-ranking thead tr.group th:nth-child(4),
+#pane-ranking thead tr.group th:nth-child(5){min-width:145px;padding-left:14px;padding-right:14px;}
+#pane-ranking tbody td:nth-child(8),
+#pane-ranking tbody td:nth-child(9){padding-left:8px;padding-right:8px;}
+#pane-ranking tbody td:nth-child(8) .pill,
+#pane-ranking tbody td:nth-child(9) .pill{margin-inline:auto;}
+
+/* Ajuste general: centrar encabezados, datos, filtros y textos de indicadores */
+.header, .header .headrow, .header h1, .header p, .eyebrow, .period {text-align:center;}
+.headrow{justify-content:center;}
+.field label{text-align:center;}
+.klabel,.kvalue,.kfoot{text-align:center;}
+.sectiontitle h2,.sectiontitle span{text-align:center;}
+.sectiontitle{justify-content:center;}
+.uploadbox{justify-content:center;text-align:center;}
+.uploadbox #uploadStatus{margin-left:0;}
+.regiontop>b{text-transform:none;letter-spacing:0;font-size:12px;}
+.regiontop>div{letter-spacing:0;font-size:11px;}
+.regiontop>div span{text-transform:none;}
+thead tr.group th{text-transform:none;letter-spacing:0;}
+thead tr.labels th{text-align:center!important;}
+tbody td, tbody td:first-child, tbody td:nth-child(2){text-align:center!important;}
+.tabbar{justify-content:center;}
+
+
+.chart-card{margin-top:22px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px;box-shadow:0 4px 15px #18314b0b}
+.chart-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:14px;padding-left:12px}.chart-head h3{margin:0;font-size:17px}.chart-head p{margin:4px 0 0;color:var(--muted);font-size:12px}
+.chart-list{display:grid;gap:8px}.chart-row{display:grid;grid-template-columns:52px minmax(80px,1fr) 70px;gap:12px;align-items:center;font-size:12px}.chart-code{font-weight:800;text-align:center;color:var(--blue)}.chart-track{height:13px;background:#edf2f6;border-radius:4px;overflow:hidden;position:relative}.chart-fill{height:100%;border-radius:4px;background:#4bbfb7;min-width:2px;opacity:.9}.chart-fill.neg{background:#e58b91}.chart-track.diverging{overflow:hidden;background:linear-gradient(to right,transparent 49.8%,#9aaebe 49.8%,#9aaebe 50.2%,transparent 50.2%),#f0f4f7}.chart-track.diverging .chart-fill{position:absolute;top:0}.chart-val{text-align:center;font-weight:700;color:#465b70;font-variant-numeric:tabular-nums}.chart-empty{padding:22px;text-align:center;color:var(--muted)}
+#pane-ranking thead tr.labels th:first-child,#pane-ranking tbody td:first-child{border-left:2px solid #b6c6d6;text-align:center!important;min-width:80px;font-weight:700;color:#52677c}
+#pane-ranking thead tr.labels th:nth-child(4),#pane-ranking tbody td:nth-child(4){border-right:2px solid #b6c6d6;}
+
+/* Ajuste de contraste del gráfico de variación: barras claramente visibles sobre fondo oscuro */
+.hbar-fill.positive{background:linear-gradient(90deg,#31d8bd,#28b7a8)!important;box-shadow:0 0 5px rgba(49,216,189,.18)!important}
+.hbar-fill.negative{background:linear-gradient(90deg,#ff737d,#ed596b)!important;box-shadow:0 0 5px rgba(255,115,125,.16)!important}
+.hbar-fill.under-threshold{background:linear-gradient(90deg,#ffd166,#f0a52f)!important;box-shadow:0 0 5px rgba(255,209,102,.18)!important}
+.hbar-track.diverging{background:linear-gradient(to right,transparent 49.7%,#b9e8ef 49.7%,#b9e8ef 50.3%,transparent 50.3%),rgba(116,169,190,.16)!important}
+
+
+
+/* Ajuste de contraste del gráfico de variación: barras claramente visibles sobre fondo oscuro */
+.hbar-fill.positive{background:linear-gradient(90deg,#31d8bd,#28b7a8)!important;box-shadow:0 0 5px rgba(49,216,189,.18)!important}
+.hbar-fill.negative{background:linear-gradient(90deg,#ff737d,#ed596b)!important;box-shadow:0 0 5px rgba(255,115,125,.16)!important}
+.hbar-fill.under-threshold{background:linear-gradient(90deg,#ffd166,#f0a52f)!important;box-shadow:0 0 5px rgba(255,209,102,.18)!important}
+.hbar-track.diverging{background:linear-gradient(to right,transparent 49.7%,#b9e8ef 49.7%,#b9e8ef 50.3%,transparent 50.3%),rgba(116,169,190,.16)!important}
+
+
+/* Tema oscuro integral: azul petróleo, turquesa y coral */
+:root{--navy:#041a2b;--blue:#123c58;--cyan:#35d4d8;--green:#103f3b;--green2:#5ce0b8;--red:#4b2937;--red2:#ff858b;--amber:#493d24;--ink:#e6f3fb;--muted:#9ab9ca;--line:#1b526b;--bg:#031725}
+html,body{background:#031725!important;color:#e6f3fb!important}
+body{background:radial-gradient(ellipse at top,#0b344b 0%,#041d30 48%,#031522 100%)!important}
+.header{background:linear-gradient(115deg,#031725,#0b344b 65%,#10445a)!important;color:#f3fbff;border-bottom:2px solid #13a9bf}
+.header p,.period,.eyebrow{color:#a6f2f1}.period{background:#06263a;border-color:#17637a}
+.card,.insight,.chart-card,.tablewrap,.uploadbox,.regiontop{background:linear-gradient(145deg,#08283c,#062236)!important;color:#e6f3fb!important;border:1px solid #11647b!important;box-shadow:0 6px 20px rgba(0,0,0,.22)!important}
+.card{border-radius:15px}.klabel,.kfoot,.small,.sectiontitle span,footer,.legend{color:#9ab9ca!important}
+.kvalue{color:#55d9dc}.field label{color:#b9dce9!important}
+.field select,.field input{background:#062338!important;color:#e8f7fc!important;border-color:#17637a!important}
+.field select option{background:#062338;color:#e8f7fc}
+.btn{background:#117b91!important;color:#f3fdff!important;border:1px solid #1599aa!important}.btn.alt{background:#0a2b40!important;color:#c9f6f5!important;border-color:#22647a!important}
+.uploadbox{border-left:4px solid #25c7d0!important}.uploadbox p,#uploadStatus{color:#a6c6d5}
+.regiontop{background:linear-gradient(180deg,#0b3147,#062236)!important}.regiontop>b{background:#12445d!important;color:#e8fbff!important}.regiontop>div{color:#b6d5e0!important}.regiontop>div span:first-child{color:#5ce0b8!important}.regiontop>div span:last-child{color:#ff858b!important}.regiontop section strong{background:#10463f!important;color:#68e8bf!important;border-color:#1c806e!important}.regiontop section em{background:#482b37!important;color:#ff9296!important;border-color:#854451!important}
+.tabbar{border-bottom-color:#14516a!important}.tab{background:#08283c!important;color:#b7d6e3!important;border-color:#15536b!important}.tab.active{background:#12627a!important;color:#fff!important;border-color:#28b9c7!important}
+thead tr.group th{background:#0b354d!important;color:#b7f4f3!important;border-color:#17617a!important}thead tr.labels th{background:#123f5b!important;color:#f1fbff!important;border-color:#1b5870!important}
+tbody td{color:#e0eff7!important;border-bottom-color:#17445b!important}tbody tr:nth-child(even){background:rgba(20,70,93,.22)!important}tbody tr:hover{background:rgba(32,145,163,.18)!important}.code{color:#65e0e0!important}
+#pane-ranking thead tr.labels th:first-child,#pane-variacion thead tr.labels th:first-child{color:#ffffff!important}#pane-ranking tbody td:first-child{color:#a8eaf0!important;border-color:#23677b!important}#pane-ranking thead tr.labels th:nth-child(4),#pane-ranking tbody td:nth-child(4){border-color:#23677b!important}
+.positive{background:#10483d!important;color:#70e7bf!important}.negative{background:#512b37!important;color:#ff9298!important}.neutral{background:#183748!important;color:#b6cbd6!important}.status.ok{background:#10483d!important;color:#70e7bf!important}.status.out{background:#493d24!important;color:#f4d48a!important}
+.rankbar,.bartrack{background:#14374a!important}.rankbar span,.barfill{background:#35c6b0!important}.barfill.low{background:#f06d75!important}
+.chart-card{margin-top:32px!important;background:linear-gradient(145deg,#06243a 0%,#0a344a 100%)!important}.chart-head h3{color:#e8f7fc}.chart-head p{color:#9ab9ca!important}.chart-code{color:#d8f2fa!important}.chart-track{background:rgba(116,169,190,.13)!important;border-color:rgba(75,178,198,.16)!important}.chart-track.diverging{background:linear-gradient(to right,transparent 49.8%,#c7e9ee 49.8%,#c7e9ee 50.2%,transparent 50.2%),rgba(116,169,190,.10)!important}.chart-val{color:#d7edf6!important}.chart-empty,.empty{color:#a7c6d5!important}
+.legend .dot{border:1px solid rgba(255,255,255,.12)}
+
+/* Gráfico vertical compacto y resaltado de sucursal buscada */
+.chart-list.vertical-bars{display:grid;grid-template-columns:repeat(auto-fit,minmax(54px,1fr));align-items:stretch;gap:9px;min-height:260px;padding:16px 8px 6px;border-bottom:1px solid rgba(91,181,202,.28)}
+.vbar-item{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;min-width:0;gap:7px;transition:opacity .2s,filter .2s,transform .2s}
+.vbar-value{font-size:11px;font-weight:700;color:#d7edf6;min-height:16px;white-space:nowrap}
+.vbar-plot{height:190px;width:100%;display:flex;align-items:flex-end;justify-content:center;position:relative;border-bottom:1px solid rgba(157,205,220,.35);background:repeating-linear-gradient(to top,transparent 0,transparent 46px,rgba(125,184,204,.09) 47px,transparent 48px)}
+.vbar{width:min(68%,42px);min-width:12px;border-radius:5px 5px 1px 1px;background:linear-gradient(180deg,#38cdbb,#168e9c);box-shadow:0 0 0 1px rgba(92,225,218,.08);transition:height .25s,opacity .2s,filter .2s}
+.vbar.negative{background:linear-gradient(180deg,#f27b83,#c84d65)}
+.vbar.under-threshold{background:linear-gradient(180deg,#f4c56a,#d98b2b)!important;box-shadow:0 0 0 1px rgba(244,197,106,.18)}
+.chart-units-empty{display:none!important}
+#insights{margin-bottom:8px}
+.vbar-code{font-size:12px;font-weight:800;color:#d8f2fa;white-space:nowrap}
+.vbar-item.dimmed{opacity:.22;filter:saturate(.35);}
+.vbar-item.selected{transform:translateY(-3px)}
+.vbar-item.selected .vbar{filter:drop-shadow(0 0 7px rgba(56,205,187,.48));outline:1px solid #7df5e6;outline-offset:2px}
+.vbar-item.selected .vbar-code{color:#69f0de}
+.chart-axis-note{font-size:11px;color:#9ab9ca;text-align:center;margin-top:8px}
+@media(max-width:850px){.chart-list.vertical-bars{grid-template-columns:repeat(auto-fit,minmax(42px,1fr));gap:5px}.vbar-plot{height:150px}}
+
+@media(max-width:850px){.header{background:linear-gradient(115deg,#031725,#0b344b)!important}}
+
+/* Ajuste de contraste del gráfico de variación: barras claramente visibles sobre fondo oscuro */
+.hbar-fill.positive{background:linear-gradient(90deg,#31d8bd,#28b7a8)!important;box-shadow:0 0 5px rgba(49,216,189,.18)!important}
+.hbar-fill.negative{background:linear-gradient(90deg,#ff737d,#ed596b)!important;box-shadow:0 0 5px rgba(255,115,125,.16)!important}
+.hbar-fill.under-threshold{background:linear-gradient(90deg,#ffd166,#f0a52f)!important;box-shadow:0 0 5px rgba(255,209,102,.18)!important}
+.hbar-track.diverging{background:linear-gradient(to right,transparent 49.7%,#b9e8ef 49.7%,#b9e8ef 50.3%,transparent 50.3%),rgba(116,169,190,.16)!important}
+.admin-tools{margin:0 0 16px;border:1px solid #1b526b;border-radius:10px;background:#061e30;color:#c7e6f0;}
+.admin-tools summary{cursor:pointer;list-style:none;padding:9px 13px;font-size:11px;color:#8fb9c9;text-align:right;user-select:none;}
+.admin-tools summary::-webkit-details-marker{display:none}.admin-tools summary:before{content:'⚙ ';color:#35d4d8}
+.admin-tools[open] summary{border-bottom:1px solid #1b526b}
+.admin-tools .uploadbox{margin:0;border:0;border-radius:0;background:transparent!important;box-shadow:none!important;color:#e6f3fb!important}
+.admin-tools .uploadbox strong{color:#e6f3fb}.admin-tools .uploadbox p{color:#9ab9ca}.admin-tools .btn.alt{background:#123c58!important;color:#dff7ff!important;border-color:#1b7185!important}
+.report-intro{margin:8px 0 16px;padding:14px 18px;border:1px solid #1b526b;border-left:3px solid #35d4d8;border-radius:10px;background:linear-gradient(135deg,rgba(9,48,69,.92),rgba(5,29,45,.92));color:#cfe5ef}
+.report-intro h2{margin:0 0 7px;color:#5fe0e3;font-size:17px}.report-intro p{margin:5px 0;font-size:12px;line-height:1.55;color:#c2d9e5}
+
+/* Acceso administrativo protegido por contraseña */
+.admin-tools:not([open]) .uploadbox{display:none}
+.admin-tools summary{position:relative}
+.admin-tools summary .admin-lock{margin-left:6px;font-size:10px;opacity:.85}
+
+/* Leyenda de colores: mayor contraste sobre el tema oscuro */
+.legend{display:flex!important;align-items:center!important;gap:10px 18px!important;color:#e3f6ff!important;margin:14px 2px!important;font-size:12px!important}
+.legend>span{display:inline-flex!important;align-items:center!important;gap:3px!important;padding:6px 10px!important;border:1px solid #286078!important;border-radius:8px!important;background:rgba(8,42,61,.92)!important;color:#e3f6ff!important;line-height:1.25!important}
+.legend .dot{width:12px!important;height:12px!important;min-width:12px!important;border-radius:4px!important;margin-right:5px!important;border:1px solid rgba(255,255,255,.55)!important;box-shadow:0 0 7px rgba(255,255,255,.10)!important}
+</style></head><body><header class="header"><div class="headrow"><div><div class="eyebrow">Experiencia del cliente · Informe ejecutivo</div><h1>Ranking de sucursales por NPS</h1><p>Seguimiento trimestral · Sucursales seleccionadas de Neuquén</p></div><div class="period">3Q 2026 · JUL — SEP</div></div></header><main class="wrap"><details class="admin-tools"><summary>Administración · Actualizar archivos fuente</summary><div class="uploadbox"><div><strong>Actualizar informes PDF</strong><p>Uso administrativo. Cargá el PDF completo correspondiente para actualizar los datos y las posiciones globales.</p></div><div class="uploadactions"><label class="btn uploadbtn" for="pdfRanking">Cargar PDF de Ranking NPS</label><input id="pdfRanking" type="file" accept="application/pdf" hidden><label class="btn alt uploadbtn" for="pdfVariacion">Cargar PDF de Variación</label><input id="pdfVariacion" type="file" accept="application/pdf" hidden></div><span id="uploadStatus" role="status">Datos de ejemplo: 3Q 2026</span></div></details>
+<div class="regiontops regiontops-ranking" id="regionRanking" aria-label="Mejores y peores sucursales por NPS"><div class="regiontop"><b>REGIÓN CENTRO</b><div><span>TOP</span><span>BOTTOM</span></div><section><strong>11</strong><em>266</em></section><section><strong>216</strong><em>45</em></section><section><strong>163</strong><em>12</em></section></div><div class="regiontop"><b>REGIÓN NORTE</b><div><span>TOP</span><span>BOTTOM</span></div><section><strong>96</strong><em>151</em></section><section><strong>206</strong><em>261</em></section><section><strong>264</strong><em>55</em></section></div><div class="regiontop"><b>REGIÓN PAMPA ANDINA</b><div><span>TOP</span><span>BOTTOM</span></div><section><strong>148</strong><em>9</em></section><section><strong>122</strong><em>212</em></section><section><strong>202</strong><em>15</em></section></div><div class="regiontop"><b>REGIÓN SUR</b><div><span>TOP</span><span>BOTTOM</span></div><section><strong>211</strong><em>200</em></section><section><strong>75</strong><em>179</em></section><section><strong>104</strong><em>160</em></section></div><div class="regiontop"><b>REGIÓN LIBERTAD</b><div><span>TOP</span><span>BOTTOM</span></div><section><strong>385</strong><em>379</em></section><section><strong>386</strong><em>378</em></section><section><strong>382</strong><em>377</em></section></div></div><div class="regiontops regiontops-variacion" id="regionVariacion" aria-label="Mejores y peores sucursales por variación" hidden><div class="regiontop"><b>REGIÓN CENTRO</b><div><span>TOP</span><span>BOTTOM</span></div><section><strong>163</strong><em>45</em></section><section><strong>46</strong><em>265</em></section><section><strong>356</strong><em>12</em></section></div><div class="regiontop"><b>REGIÓN NORTE</b><div><span>TOP</span><span>BOTTOM</span></div><section><strong>152</strong><em>89</em></section><section><strong>185</strong><em>221</em></section><section><strong>85</strong><em>361</em></section></div><div class="regiontop"><b>REGIÓN PAMPA ANDINA</b><div><span>TOP</span><span>BOTTOM</span></div><section><strong>18</strong><em>196</em></section><section><strong>257</strong><em>177</em></section><section><strong>202</strong><em>8</em></section></div><div class="regiontop"><b>REGIÓN SUR</b><div><span>TOP</span><span>BOTTOM</span></div><section><strong>179</strong><em>183</em></section><section><strong>131</strong><em>31</em></section><section><strong>23</strong><em>220</em></section></div><div class="regiontop"><b>REGIÓN LIBERTAD</b><div><span>TOP</span><span>BOTTOM</span></div><section><strong>378</strong><em>383</em></section><section><strong>380</strong><em>381</em></section><section><strong>377</strong><em>385</em></section></div></div><section class="topcards"><div class="card"><div class="klabel" id="klabel1">NPS promedio de sucursales</div><div class="kvalue" id="avg">—</div><div class="kfoot" id="kfoot1">Promedio simple de las seleccionadas</div></div><div class="card"><div class="klabel" id="klabel2">Casos del trimestre</div><div class="kvalue" id="cases">—</div><div class="kfoot" id="kfoot2">Total de respuestas registradas</div></div><div class="card"><div class="klabel" id="klabel3">Sucursales en ranking</div><div class="kvalue" id="qualified">—</div><div class="kfoot" id="kfoot3">Mínimo de 60 casos en el trimestre</div></div><div class="card"><div class="klabel" id="klabel4">Variación vs. 2Q 2026</div><div class="kvalue" id="variation">—</div><div class="kfoot" id="kfoot4">Promedio simple de la variación</div></div></section>
+<div class="filters"><div class="field"><label for="zone">Zona</label><select id="zone"><option value="all">Todas las zonas</option><option>Neuquén Ciudad</option><option>Neuquén Interior</option></select></div><div class="field"><label for="statusFilter">Participación</label><select id="statusFilter"><option value="all">Todas</option><option value="rank">En ranking (≥ 60 casos)</option><option value="out">Fuera del ranking (&lt; 60 casos)</option></select></div><div class="field"><label for="search">Buscar sucursal</label><input id="search" placeholder="Código, ej. 356"></div><button class="btn" id="reset">Restablecer</button><button class="btn alt" id="csv">Exportar a Excel (.xlsx)</button></div>
+<div class="tabbar" role="tablist" aria-label="Vistas del informe"><button class="tab active" data-tab="ranking" role="tab" aria-selected="true">Ranking</button><button class="tab" data-tab="variacion" role="tab" aria-selected="false">Variación</button></div>
+<section class="tabpane active" id="pane-ranking"><div class="report-intro"><h2>Ranking NPS · Sucursales de Neuquén</h2><p>Se contemplan únicamente las sucursales con un mínimo de 60 casos en el trimestre analizado (3Q2026).</p><p>Los datos se agrupan por región y se ordenan de mayor a menor NPS según la columna “NPS acumulado YTD” del trimestre analizado.</p><p>En el ranking oficial, las sucursales con mejor y peor desempeño se identifican según el informe fuente de cada región.</p></div><div class="sectiontitle"><h2>Ranking por NPS · mayor a menor</h2><span id="resultCount">14 sucursales</span></div><div class="tablewrap"><table><thead><tr class="group"><th colspan="4">Identificación</th><th colspan="2">NPS acumulado (YTD) · 3Q26</th><th colspan="2">NPS acumulado (YTD) anterior · 2Q26</th><th>Variación vs. trimestre anterior</th><th>Variación vs. meta sucursal</th><th colspan="2">NPS E117 · 3Q25</th><th>Variación vs. MPAA</th></tr><tr class="labels"><th>Pos. global<br>(50 sucursales)</th><th>Sucursal</th><th>Región</th><th>Zona</th><th>NPS</th><th>Casos totales</th><th>NPS</th><th>Casos totales</th><th>VAR PP</th><th>VAR PP</th><th>NPS</th><th>Casos</th><th>VAR PP</th></tr></thead><tbody id="tbody"></tbody></table><div id="empty" class="empty" hidden>No hay sucursales que coincidan con los filtros.</div></div></section>
+<section class="tabpane" id="pane-variacion"><div class="report-intro"><h2>Ranking por variación de NPS · Sucursales de Neuquén</h2><p>Se contemplan únicamente las sucursales con un mínimo de 60 casos en el trimestre analizado (3Q2026) y en el trimestre anterior (2Q2026).</p><p>Los datos se agrupan por región y se ordenan de mayor a menor crecimiento del NPS, según la columna “Variación vs. Q anterior”.</p><p>En el ranking oficial, las sucursales con mejor desempeño se identifican según el informe fuente de cada región.</p></div><div class="sectiontitle"><h2>Variación de indicadores</h2><span id="variationCount">14 sucursales</span></div><div class="tablewrap"><table><thead><tr class="group"><th colspan="3">Identificación</th><th colspan="2">Evolución NPS</th><th colspan="2">Variaciones en puntos porcentuales</th><th colspan="2">Comparación interanual</th></tr><tr class="labels"><th>Pos. global<br>(44 sucursales)</th><th>Sucursal</th><th>Región</th><th>Zona</th><th>NPS 3Q26</th><th>NPS 2Q26</th><th>Vs. 2Q26</th><th>Vs. meta SUC</th><th>NPS 3Q25</th><th>Vs. 3Q25 / MPAA</th></tr></thead><tbody id="tbodyVar"></tbody></table><div id="emptyVar" class="empty" hidden>No hay sucursales que coincidan con los filtros.</div></div></section>
+<div class="legend"><span><i class="dot" style="background:#31d8bd"></i>Variación positiva</span><span><i class="dot" style="background:#ff737d"></i>Variación negativa</span><span><i class="dot" style="background:#ffd166"></i>Menos de 60 casos: no participa del ranking oficial</span></div>
+<div class="bottom" id="insights"><section class="insight"><h3 id="bestTitle">Mayor NPS entre las sucursales visibles</h3><div id="best"></div></section><section class="insight"><h3 id="worstTitle">Menor NPS entre las sucursales visibles</h3><div id="worst"></div></section></div><section class="chart-card" aria-live="polite"><div class="chart-head"><div><h3 id="chartTitle">NPS por sucursal</h3><p id="chartSubtitle">Comparación visual de las sucursales filtradas</p></div><span class="small chart-units-empty" id="chartUnits" aria-hidden="true"></span></div><div id="chartList" class="chart-list"></div></section><footer>Vista web de trabajo · Fuentes: Ranking por NPS y Ranking por variación 3Q 2026 · Posición global en cada solapa tomada del PDF completo correspondiente; en Variación se exige un mínimo de 60 casos tanto en 3Q26 como en 2Q26.</footer></main><script src="https://cdn.jsdelivr.net/npm/exceljs@4.4.0/dist/exceljs.min.js"></script>
+<script>
+const DATA=[{"sucursal": "050", "zona": "Neuquén Interior", "nps": "64,65", "casos": 198, "nps2q": "55,47", "casos2q": 128, "varq": "9,2", "varmeta": "-1,4", "nps25": "65,29", "casos25": 12100, "varmpaa": "-0,6", "ranking": true}, {"sucursal": "076", "zona": "Neuquén Interior", "nps": "59,49", "casos": 158, "nps2q": "66,18", "casos2q": 136, "varq": "-6,7", "varmeta": "-6,5", "nps25": "72,26", "casos25": 13700, "varmpaa": "-12,8", "ranking": true}, {"sucursal": "172", "zona": "Neuquén Interior", "nps": "68,75", "casos": 128, "nps2q": "64,96", "casos2q": 117, "varq": "3,8", "varmeta": "1,8", "nps25": "72,00", "casos25": 7500, "varmpaa": "-3,3", "ranking": true}, {"sucursal": "182", "zona": "Neuquén Interior", "nps": "71,05", "casos": 228, "nps2q": "66,84", "casos2q": 190, "varq": "4,2", "varmeta": "2,3", "nps25": "73,96", "casos25": 16900, "varmpaa": "-2,9", "ranking": true}, {"sucursal": "188", "zona": "Neuquén Interior", "nps": "67,88", "casos": 137, "nps2q": "67,02", "casos2q": 94, "varq": "0,9", "varmeta": "16,2", "nps25": "74,51", "casos25": 10200, "varmpaa": "-6,6", "ranking": true}, {"sucursal": "213", "zona": "Neuquén Interior", "nps": "69,01", "casos": 171, "nps2q": "72,88", "casos2q": 118, "varq": "-3,9", "varmeta": "3,8", "nps25": "73,23", "casos25": 12700, "varmpaa": "-4,2", "ranking": true}, {"sucursal": "228", "zona": "Neuquén Interior", "nps": "54,41", "casos": 68, "nps2q": "64,44", "casos2q": 45, "varq": "-10,0", "varmeta": "-21,6", "nps25": "55,00", "casos25": 4000, "varmpaa": "-0,6", "ranking": true}, {"sucursal": "230", "zona": "Neuquén Interior", "nps": "75,00", "casos": 32, "nps2q": "75,00", "casos2q": 28, "varq": "0,0", "varmeta": "4,0", "nps25": "79,31", "casos25": 2900, "varmpaa": "-4,3", "ranking": false}, {"sucursal": "234", "zona": "Neuquén Interior", "nps": "71,25", "casos": 80, "nps2q": "83,33", "casos2q": 66, "varq": "-12,1", "varmeta": "-0,3", "nps25": "75,38", "casos25": 6500, "varmpaa": "-4,1", "ranking": true}, {"sucursal": "247", "zona": "Neuquén Interior", "nps": "56,67", "casos": 30, "nps2q": "61,90", "casos2q": 21, "varq": "-5,2", "varmeta": "2,1", "nps25": "50,00", "casos25": 2800, "varmpaa": "6,7", "ranking": false}, {"sucursal": "259", "zona": "Neuquén Interior", "nps": "69,23", "casos": 39, "nps2q": "78,00", "casos2q": 50, "varq": "-8,8", "varmeta": "7,5", "nps25": "72,55", "casos25": 5100, "varmpaa": "-3,3", "ranking": false}, {"sucursal": "266", "zona": "Neuquén Interior", "nps": "48,24", "casos": 85, "nps2q": "51,47", "casos2q": 68, "varq": "-3,2", "varmeta": "-24,8", "nps25": "74,14", "casos25": 5800, "varmpaa": "-25,9", "ranking": true}, {"sucursal": "356", "zona": "Neuquén Interior", "nps": "72,04", "casos": 93, "nps2q": "59,21", "casos2q": 76, "varq": "12,8", "varmeta": "6,0", "nps25": "51,72", "casos25": 8700, "varmpaa": "20,3", "ranking": true}, {"sucursal": "357", "zona": "Neuquén Interior", "nps": "70,00", "casos": 70, "nps2q": "73,97", "casos2q": 73, "varq": "-4,0", "varmeta": "0,3", "nps25": "61,02", "casos25": 5900, "varmpaa": "9,0", "ranking": true}];
+const num=v=>{if(v===null||v===undefined||v==='—'||v==='S/D')return null;return Number(String(v).replace(',','.'))};
+const fmt=(v,d=2)=>v===null||v===undefined?'—':Number(v).toLocaleString('es-AR',{minimumFractionDigits:d,maximumFractionDigits:d});
+const nfmt=v=>Number(v).toLocaleString('es-AR');
+function tone(v){const n=num(v);return n===null?'neutral':n>0?'positive':n<0?'negative':'neutral'}
+function participates(d,view=activeView){return view==='variacion'?(d.casos>=60&&d.casos2q>=60):d.casos>=60;}
+function filtered(){const z=document.getElementById('zone').value,s=document.getElementById('statusFilter').value,q=document.getElementById('search').value.trim();return DATA.filter(d=>(z==='all'||d.zona===z)&&(s==='all'||(s==='rank'?participates(d):!participates(d)))&&(!q||d.sucursal.includes(q)))}
+// Posición global calculada solo entre sucursales habilitadas (>=60 casos), sin que los filtros alteren el puesto.
+// Posiciones oficiales tomadas del PDF completo de Ranking por NPS (no del subconjunto filtrado).
+let GLOBAL_RANK=new Map(Object.entries({'356':13,'234':15,'182':16,'357':21,'213':25,'172':28,'188':30,'050':38,'076':43,'228':47,'266':49}));
+// Posiciones del ranking completo de variación trimestral, tomadas del PDF fuente.
+let GLOBAL_VAR_RANK=new Map(Object.entries({'356':3,'050':9,'182':18,'172':19,'188':21,'266':26,'213':30,'357':31,'076':36,'234':38}));
+let GLOBAL_CENTRO_NPS=50, GLOBAL_CENTRO_VAR=44;
+function updateGlobalHeaders(){const n=document.querySelector('#pane-ranking .labels th');const v=document.querySelector('#pane-variacion .labels th');if(n)n.innerHTML=`Pos. global<br>(${GLOBAL_CENTRO_NPS} sucursales)`;if(v)v.innerHTML=`Pos. global<br>(${GLOBAL_CENTRO_VAR} sucursales)`;}
+function render(){updateGlobalHeaders();const arr=filtered();document.getElementById('resultCount').textContent=`${arr.length} de ${DATA.length} sucursales`;document.getElementById('variationCount').textContent=`${arr.length} de ${DATA.length} sucursales`;const tb=document.getElementById('tbody'),tv=document.getElementById('tbodyVar');tb.innerHTML='';tv.innerHTML='';document.getElementById('empty').hidden=arr.length>0;document.getElementById('emptyVar').hidden=arr.length>0;[...arr].sort((a,b)=>Number(b.ranking)-Number(a.ranking)||(num(b.nps)??-Infinity)-(num(a.nps)??-Infinity)).forEach(d=>{const region=(d.zona||'').includes('Interior')||(d.zona||'').includes('Ciudad')?'Centro':'';const cells=[`${d.ranking&&d.casos>=60?GLOBAL_RANK.get(d.sucursal):'—'}`,`<span class="code">${d.sucursal}</span>`,`<span>${region}</span>`,`<span>${d.zona}</span>`,`<strong>${fmt(num(d.nps))}</strong>`,`<span>${nfmt(d.casos)}</span>`,`${fmt(num(d.nps2q))}`,`${nfmt(d.casos2q)}`,`<span class="pill ${tone(d.varq)}">${fmt(num(d.varq),1)}</span>`,`<span class="pill ${tone(d.varmeta)}">${fmt(num(d.varmeta),1)}</span>`,`${fmt(num(d.nps25))}`,`${d.casos25===null?'—':nfmt(d.casos25)}`,`<span class="pill ${tone(d.varmpaa)}">${fmt(num(d.varmpaa),1)}</span>`];const tr=document.createElement('tr');cells.forEach((v,i)=>{const td=document.createElement('td');td.innerHTML=v;if(i===1)td.innerHTML+=` <span class="status ${d.ranking?'ok':'out'}">${d.ranking?'En ranking':'<60 casos'}</span>`;tr.appendChild(td)});tb.appendChild(tr);});[...arr].sort((a,b)=>Number(!(a.casos>=60&&a.casos2q>=60))-Number(!(b.casos>=60&&b.casos2q>=60))||((num(b.varq)??-Infinity)-(num(a.varq)??-Infinity))).forEach(d=>{const region=(d.zona||'').includes('Interior')||(d.zona||'').includes('Ciudad')?'Centro':'';const vr=document.createElement('tr');const varEligible=d.casos>=60&&d.casos2q>=60;const vc=[`${varEligible? (GLOBAL_VAR_RANK.get(d.sucursal)??'—'):'—'}`,`<span class="code">${d.sucursal}</span>`,`<span>${region}</span>`,`<span>${d.zona}</span>`,`<strong>${fmt(num(d.nps))}</strong>`,`${fmt(num(d.nps2q))}`,`<span class="pill ${tone(d.varq)}">${fmt(num(d.varq),1)} pp</span>`,`<span class="pill ${tone(d.varmeta)}">${fmt(num(d.varmeta),1)} pp</span>`,`${fmt(num(d.nps25))}`,`<span class="pill ${tone(d.varmpaa)}">${fmt(num(d.varmpaa),1)} pp</span>`];vc.forEach((v,i)=>{const td=document.createElement('td');td.innerHTML=v;if(i===1)td.innerHTML+=` <span class="status ${varEligible?'ok':'out'}">${varEligible?'En ranking':'<60 casos'}</span>`;if(!varEligible)td.title='No cumple el mínimo de 60 casos tanto en 3Q26 como en 2Q26';vr.appendChild(td)});tv.appendChild(vr)});const qualified=arr.filter(d=>participates(d)),avg=qualified.length?qualified.reduce((s,d)=>s+num(d.nps),0)/qualified.length:null,casos=arr.reduce((s,d)=>s+d.casos,0),variation=qualified.length?qualified.reduce((s,d)=>s+num(d.varq),0)/qualified.length:null;const growth=qualified.filter(d=>(num(d.varq)??0)>0).length;const maxGrowth=[...arr].sort((a,b)=>(num(b.varq)??-Infinity)-(num(a.varq)??-Infinity))[0];document.getElementById('avg').textContent=activeView==='variacion'?(variation===null?'—':`${variation>0?'+':''}${fmt(variation,1)} pp`):(avg===null?'—':fmt(avg));document.getElementById('cases').textContent=nfmt(casos);document.getElementById('qualified').textContent=activeView==='variacion'?`${growth} / ${qualified.length}`:`${qualified.length} / ${arr.length}`;document.getElementById('variation').textContent=activeView==='variacion'?(maxGrowth?`${maxGrowth.sucursal} · +${fmt(num(maxGrowth.varq),1)} pp`:'—'):(variation===null?'—':`${variation>0?'+':''}${fmt(variation,1)} pp`);const searchTerm=document.getElementById('search').value.trim();const chartBase=filteredForChart();const insights=document.getElementById('insights');insights.hidden=false;const sorted=[...chartBase].filter(d=>d.ranking&&num(d.nps)!==null).sort((a,b)=>num(b.nps)-num(a.nps));const low=[...arr].filter(d=>d.ranking&&num(d.nps)!==null).sort((a,b)=>num(a.nps)-num(b.nps));const selectedBranch=searchTerm?DATA.find(d=>String(d.sucursal).includes(searchTerm)):null;const bestTitle=document.getElementById('bestTitle');if(searchTerm&&selectedBranch){bestTitle.textContent='Oportunidad de mejora vs. la primera sucursal';const top=sorted[0];if(top){const gap=num(top.nps)-num(selectedBranch.nps);document.getElementById('best').innerHTML=`<div class="barrow"><b>${selectedBranch.sucursal}</b><div><div class="small">NPS seleccionado ${fmt(num(selectedBranch.nps))} · Top 1: sucursal ${top.sucursal} (${fmt(num(top.nps))})</div><div class="bartrack"><div class="barfill" style="width:${Math.max(0,Math.min(100,num(selectedBranch.nps)))}%"></div></div></div><b>${gap>0?'+':''}${fmt(gap)} pts</b></div>`}else{document.getElementById('best').textContent='Sin datos para comparar'}}else{bestTitle.textContent='Mayor NPS entre las sucursales visibles';document.getElementById('best').innerHTML=sorted.length?`<div class="barrow"><b>${sorted[0].sucursal}</b><div><div class="small">${sorted[0].zona}</div><div class="bartrack"><div class="barfill" style="width:${Math.max(0,Math.min(100,num(sorted[0].nps)))}%"></div></div></div><b>${fmt(num(sorted[0].nps))}</b></div>`:'—'}const worstCard=document.getElementById('worstTitle').closest('.insight');worstCard.hidden=!!(searchTerm&&selectedBranch);document.getElementById('worst').innerHTML=low.length?`<div class="barrow"><b>${low[0].sucursal}</b><div><div class="small">${low[0].zona}</div><div class="bartrack"><div class="barfill low" style="width:${Math.max(0,Math.min(100,num(low[0].nps)))}%"></div></div></div><b>${fmt(num(low[0].nps))}</b></div>`:'—';renderChart(chartBase,searchTerm)}
+
+function filteredForChart(){const z=document.getElementById('zone').value,s=document.getElementById('statusFilter').value;return DATA.filter(d=>(z==='all'||d.zona===z)&&(s==='all'||(s==='rank'?participates(d):!participates(d))))}
+function renderChart(arr,searchTerm=''){
+ const list=document.getElementById('chartList');
+ const isVar=activeView==='variacion';
+ list.classList.remove('vertical-bars','horizontal-bars','variation-bars');
+ list.classList.add(isVar?'horizontal-bars':'vertical-bars');
+ document.getElementById('chartTitle').textContent=isVar?'Variación del NPS por sucursal':'NPS por sucursal';
+ document.getElementById('chartSubtitle').textContent=searchTerm?`Sucursal ${searchTerm} resaltada · las demás se mantienen atenuadas para comparar`:(isVar?'Mejoras y retrocesos frente al trimestre anterior':'Comparación del NPS del trimestre actual · de mayor a menor');
+ document.getElementById('chartUnits').textContent='';
+ const key=isVar?'varq':'nps';
+ const data=[...arr].filter(d=>num(d[key])!==null).sort((a,b)=>isVar?num(b[key])-num(a[key]):num(b.nps)-num(a.nps));
+ if(!data.length){list.innerHTML='<div class="chart-empty">No hay datos para graficar con los filtros seleccionados.</div>';return;}
+ const selected=String(searchTerm||'').trim();
+ const maxAbs=Math.max(1,...data.map(d=>Math.abs(num(d[key]))));
+ if(!isVar){
+   list.innerHTML=data.map(d=>{
+     const value=num(d.nps),isSelected=!!selected&&String(d.sucursal).includes(selected),dimmed=!!selected&&!isSelected;
+     const underThreshold=d.casos<60;
+     const height=Math.max(2,Math.max(0,value)/Math.max(1,...data.map(x=>Math.max(0,num(x.nps)||0)))*100);
+     const shown=fmt(value,2);
+     return `<div class="vbar-item ${isSelected?'selected':''} ${dimmed?'dimmed':''}" title="Sucursal ${d.sucursal}: NPS ${shown}${underThreshold?' · Menos de 60 casos; fuera del ranking oficial':''}"><div class="vbar-value">${shown}</div><div class="vbar-plot"><div class="vbar ${underThreshold?'under-threshold':''}" style="height:${height}%"></div></div><div class="vbar-code">${d.sucursal}</div></div>`;
+   }).join('')+`<div class="chart-axis-note">Turquesa: participa del ranking · Naranja: menos de 60 casos, fuera del ranking oficial</div>`;
+   return;
+ }
+ list.innerHTML=data.map(d=>{
+   const value=num(d.varq),isSelected=!!selected&&String(d.sucursal).includes(selected),dimmed=!!selected&&!isSelected;
+   const underThreshold=d.casos<60||d.casos2q<60;
+   const width=Math.max(1,Math.abs(value)/maxAbs*100);
+   const shown=(value>0?'+':'')+fmt(value,1);
+   const barClass=underThreshold?'under-threshold':(value<0?'negative':'positive');
+   return `<div class="hbar-row ${isSelected?'selected':''} ${dimmed?'dimmed':''}" title="Sucursal ${d.sucursal}: ${shown} pp${underThreshold?' · Menos de 60 casos en uno de los trimestres':''}"><span class="hbar-code">${d.sucursal}</span><div class="hbar-track diverging"><div class="hbar-fill ${barClass}" style="position:absolute;top:0;height:100%;width:${width/2}%;left:${value<0?50-width/2:50}%;"></div></div><strong class="hbar-value">${shown} pp</strong></div>`;
+ }).join('')+`<div class="chart-axis-note">Turquesa: mejora · Coral: retroceso · Naranja: menos de 60 casos en uno de los trimestres</div>`;
+}
+let activeView='ranking';
+function setView(view){activeView=view;const isVar=view==='variacion';document.getElementById('regionRanking').hidden=isVar;document.getElementById('regionVariacion').hidden=!isVar;
+const labels=isVar?['Variación promedio vs. 2Q','Casos del trimestre','Sucursales que mejoran','Mayor crecimiento de NPS']:['NPS promedio de sucursales','Casos del trimestre','Sucursales en ranking','Variación vs. 2Q 2026'];
+const foots=isVar?['Promedio simple de la variación','Total de respuestas registradas','Variación positiva frente al trimestre anterior','Entre las sucursales seleccionadas']:['Promedio simple de las seleccionadas','Total de respuestas registradas','Mínimo de 60 casos en el trimestre','Promedio simple de la variación'];
+for(let i=1;i<=4;i++){document.getElementById('klabel'+i).textContent=labels[i-1];document.getElementById('kfoot'+i).textContent=foots[i-1];}
+render();}
+async function exportCSV(){
+ const btn=document.getElementById('csv');
+ if(!window.ExcelJS){alert('No se pudo cargar el módulo de Excel. Verificá tu conexión a internet e intentá nuevamente.');return;}
+ const arr=filtered();
+ const headers=['Posición global NPS','Posición global variación','Sucursal','Zona','NPS 3Q26','Casos 3Q26','NPS 2Q26','Casos 2Q26','Variación vs 2Q (pp)','Variación vs meta (pp)','NPS 3Q25','Casos 3Q25','Variación vs MPAA (pp)','Participa ranking NPS','Participa ranking variación'];
+ const rows=arr.map(d=>[d.ranking&&d.casos>=60?(GLOBAL_RANK.get(d.sucursal)??''):'',d.casos>=60&&d.casos2q>=60?(GLOBAL_VAR_RANK.get(d.sucursal)??''):'',d.sucursal,d.zona,d.nps,d.casos,d.nps2q,d.casos2q,d.varq,d.varmeta,d.nps25,d.casos25??'',d.varmpaa,d.ranking?'Sí':'No',d.casos>=60&&d.casos2q>=60?'Sí':'No']);
+ const num=v=>{if(v===null||v===undefined||v==='')return null;if(typeof v==='number')return v;const t=String(v).trim();const n=Number(t.includes(',')?t.replace(/\./g,'').replace(',','.'):t);return Number.isFinite(n)?n:v;};
+ btn.disabled=true;const original=btn.textContent;btn.textContent='Preparando Excel…';
+ try{
+  const wb=new ExcelJS.Workbook();wb.creator='Ranking NPS Neuquén';wb.subject='Ranking NPS y variación 3Q2026';wb.created=new Date();
+  const ws=wb.addWorksheet('Ranking y variación',{views:[{state:'frozen',ySplit:4}]});
+  ws.mergeCells(1,1,1,headers.length);const zone=document.getElementById('zone').value;const zoneLabel=zone==='all'?'Todas las zonas':zone;
+  ws.getCell(1,1).value=`Desempeño NPS · ${zoneLabel} · ${document.querySelector('.tab.active')?.textContent.trim()||'Ranking'}`;
+  ws.getCell(1,1).font={name:'Aptos Display',size:16,bold:true,color:{argb:'FFFFFFFF'}};ws.getCell(1,1).fill={type:'pattern',pattern:'solid',fgColor:{argb:'FF073047'}};ws.getCell(1,1).alignment={vertical:'middle',horizontal:'center'};ws.getRow(1).height=30;
+  ws.mergeCells(2,1,2,headers.length);ws.getCell(2,1).value='Fuente: informes Ranking NPS y Ranking por variación · 3Q 2026';ws.getCell(2,1).font={italic:true,size:10,color:{argb:'FF426579'}};ws.getCell(2,1).alignment={horizontal:'left'};
+  const hr=ws.getRow(4);hr.values=headers;hr.height=32;hr.eachCell(c=>{c.font={bold:true,color:{argb:'FFFFFFFF'},size:10};c.fill={type:'pattern',pattern:'solid',fgColor:{argb:'FF116A80'}};c.alignment={horizontal:'center',vertical:'middle',wrapText:true};c.border={top:{style:'thin',color:{argb:'FF38CFC3'}},bottom:{style:'medium',color:{argb:'FF38CFC3'}},left:{style:'thin',color:{argb:'FFBDD4DD'}},right:{style:'thin',color:{argb:'FFBDD4DD'}}};});
+  rows.forEach((r,i)=>{const row=ws.getRow(i+5);row.values=r.map((v,j)=>[4,6,10,11,13].includes(j)?num(v):v);row.height=23;row.eachCell((c,col)=>{c.font={name:'Aptos',size:10,color:{argb:'FF16384A'}};c.fill={type:'pattern',pattern:'solid',fgColor:{argb:i%2?'FFF0F7FA':'FFFFFFFF'}};c.alignment={vertical:'middle',horizontal:col<=4||[5,7,9,10,11,12,13,14].includes(col)?'center':'center'};c.border={bottom:{style:'hair',color:{argb:'FFD0E1E8'}},left:{style:'thin',color:{argb:'FFE0EBEF'}},right:{style:'thin',color:{argb:'FFE0EBEF'}}};});
+   [5,7,9,10,11,13].forEach(col=>{const c=row.getCell(col);if(typeof c.value==='number')c.numFmt='0.00;[Red]-0.00;–';});
+   [9,10,13].forEach(col=>{const c=row.getCell(col);if(typeof c.value==='number'){const color=c.value>0?'FFD7F3E5':c.value<0?'FFFFDDE0':'FFFFE8B2';c.fill={type:'pattern',pattern:'solid',fgColor:{argb:color}};c.font={bold:true,color:{argb:c.value>0?'FF087D68':c.value<0?'FFC43848':'FF9A6400'}};}});
+   if(Number(row.getCell(6).value)<60){row.getCell(3).fill={type:'pattern',pattern:'solid',fgColor:{argb:'FFFFE8B2'}};row.getCell(3).font={bold:true,color:{argb:'FF9A6400'}};}
+  });
+  const widths=[18,23,12,23,14,14,14,14,22,22,14,14,20,18];ws.columns=widths.map(w=>({width:w}));ws.autoFilter={from:{row:4,column:1},to:{row:4,column:headers.length}};
+  ws.eachRow((row,rn)=>{if(rn>=4)row.eachCell(c=>{if(!c.border)c.border={bottom:{style:'hair',color:{argb:'FFD0E1E8'}}};});});
+  const buffer=await wb.xlsx.writeBuffer();const blob=new Blob([buffer],{type:'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='Ranking_NPS_Neuquen_3Q2026.xlsx';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1500);
+ }catch(e){console.error(e);alert('No se pudo generar el Excel: '+e.message);}finally{btn.disabled=false;btn.textContent=original;}
+}
+function updateReportZone(){const z=document.getElementById('zone').value;const label=z==='all'?'Sucursales de Neuquén':`Zona ${z}`;const a=document.querySelector('#pane-ranking .report-intro h2');const b=document.querySelector('#pane-variacion .report-intro h2');a.textContent=`Ranking NPS · ${label}`;b.textContent=`Ranking por variación de NPS · ${label}`;}
+document.getElementById('zone').addEventListener('change',updateReportZone);
+['zone','statusFilter','search'].forEach(id=>document.getElementById(id).addEventListener(id==='search'?'input':'change',render));document.getElementById('reset').onclick=()=>{document.getElementById('zone').value='all';document.getElementById('statusFilter').value='all';document.getElementById('search').value='';updateReportZone();render()};document.getElementById('csv').onclick=exportCSV;document.querySelectorAll('.tab').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.tab').forEach(b=>{b.classList.toggle('active',b===btn);b.setAttribute('aria-selected',b===btn?'true':'false')});document.querySelectorAll('.tabpane').forEach(p=>p.classList.toggle('active',p.id==='pane-'+btn.dataset.tab));setView(btn.dataset.tab)}));render();
+
+const pdfScript=document.createElement('script');pdfScript.src='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js';pdfScript.onload=()=>{if(window.pdfjsLib)pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js'};document.head.appendChild(pdfScript);
+async function readPdfInput(inputId,label){
+ const input=document.getElementById(inputId), files=[...input.files]; if(!files.length)return;
+ const status=document.getElementById('uploadStatus'); status.textContent=`Leyendo ${label}…`;
+ try{
+  if(!window.pdfjsLib) throw new Error('No se pudo cargar el lector PDF. Verificá tu conexión a internet.');
+  let text='';
+  for(const file of files){const pdf=await pdfjsLib.getDocument({data:await file.arrayBuffer()}).promise;
+   for(let p=1;p<=pdf.numPages;p++){const page=await pdf.getPage(p);const c=await page.getTextContent();let line='',lastY=null;
+    for(const it of c.items){const y=it.transform?it.transform[5]:null;if(lastY!==null&&y!==null&&Math.abs(y-lastY)>3){text+=line+'\n';line='';}line+=(line?' ':'')+it.str;lastY=y;}text+=line+'\n';
+   }
+  }
+  // Reconstruir las posiciones globales desde el PDF completo que corresponda.
+  if(label==='Variación') {
+   const rows=[];let centroCount=0;
+   for(const raw of text.split(/\n/)){
+    const line=raw.replace(/\s+/g,' ').trim();
+    const m=line.match(/^(\d{1,3})\s+(Centro|Norte|Pampa Andina|Sur|Libertad)\s+.+?\s+(\d{1,3}[,.]\d{2})\s+(\d{1,4})\s+(\d{1,3}[,.]\d{2})\s+(\d{1,4})\s+(-?\d{1,3}[,.]\d?)\s+/);
+    if(!m) continue;
+    if(Number(m[4])<60 || Number(m[6])<60) continue;
+    if(m[2]==='Centro') centroCount++;
+    rows.push(m[1].padStart(3,'0'));
+   }
+   if(rows.length){GLOBAL_CENTRO_VAR=centroCount;GLOBAL_VAR_RANK=new Map();rows.forEach((code,index)=>{if(DATA.some(d=>d.sucursal===code))GLOBAL_VAR_RANK.set(code,index+1);});}
+  }
+  if(label==='Ranking'){
+   const globalRows=[];
+   for(const raw of text.split(/\\n/)){
+    const line=raw.replace(/\\s+/g,' ').trim();
+    const gm=line.match(/^(\\d{1,3})\\s+(Centro|Norte|Pampa Andina|Sur|Libertad)\\s+.+?\\s+(\\d{1,3}[,.]\\d{2})\\s+(\\d{1,4})\\s+/);
+    if(!gm) continue;
+    const cases=Number(gm[4]);
+    // El ranking oficial termina al comenzar el listado de sucursales que no alcanzan el mínimo.
+    if(cases<60) break;
+    if(gm[2]==='Centro') centroCount++;
+    globalRows.push(gm[1].padStart(3,'0'));
+   }
+   GLOBAL_CENTRO_NPS=centroCount;GLOBAL_RANK=new Map();
+   globalRows.forEach((code,index)=>{if(DATA.some(d=>d.sucursal===code))GLOBAL_RANK.set(code,index+1);});
+  }
+  const wanted=new Set(DATA.map(d=>d.sucursal));let updated=0;
+  for(const raw of text.split(/\n/)){const line=raw.replace(/\s+/g,' ').trim();const m=line.match(/^(\d{1,3})\s+(.+?)\s+(\d{1,3}[,.]\d{2})\s+(\d{1,4})\s+(\d{1,3}[,.]\d{2})\s+(\d{1,4})\s+(-?\d{1,3}[,.]\d?)\s+(-?\d{1,3}[,.]\d?)(?:\s+(\d{1,3}[,.]\d{2})\s+(\d{1,5})\s+(-?\d{1,3}[,.]\d?))?/);
+   if(!m)continue;const code=m[1].padStart(3,'0');if(!wanted.has(code))continue;
+   const d=DATA.find(x=>x.sucursal===code);if(!d)continue;
+   d.zona=m[2].includes('Neuquén Ciudad')?'Neuquén Ciudad':m[2].includes('Neuquén Interior')?'Neuquén Interior':d.zona;
+   d.nps=m[3].replace('.',',');d.casos=Number(m[4]);d.nps2q=m[5].replace('.',',');d.casos2q=Number(m[6]);d.varq=m[7].replace('.',',');d.varmeta=m[8].replace('.',',');if(m[9])d.nps25=m[9].replace('.',',');if(m[10])d.casos25=Number(m[10]);if(m[11])d.varmpaa=m[11].replace('.',',');d.ranking=d.casos>=60;updated++;
+  }
+  render();status.textContent=updated?`${label}: ${updated} sucursal(es) reconocidas`:`No se reconocieron filas en ${label}. Se mantienen los datos anteriores.`;
+ }catch(err){status.textContent='Error al leer el PDF: '+err.message;}
+ input.value='';
+}
+// La sección de administración solicita clave antes de mostrar los controles de carga.
+const adminPanel=document.querySelector('.admin-tools');
+const adminSummary=adminPanel.querySelector('summary');
+adminSummary.innerHTML='Administración · Actualizar archivos fuente <span class="admin-lock">🔒 Acceso restringido</span>';
+let adminUnlocked=false;
+adminSummary.addEventListener('click',function(event){
+ if(adminUnlocked) return;
+ event.preventDefault();
+ const entered=window.prompt('Ingresá la clave de administración:');
+ if(entered===null) return;
+ if(entered==='admin2026'){
+  adminUnlocked=true;
+  adminPanel.open=true;
+  adminSummary.querySelector('.admin-lock').textContent='🔓 Sesión habilitada';
+ }else{
+  window.alert('Clave incorrecta. No se habilitó la administración.');
+ }
+});
+document.getElementById('pdfRanking').addEventListener('change',()=>readPdfInput('pdfRanking','Ranking'));
+document.getElementById('pdfVariacion').addEventListener('change',()=>readPdfInput('pdfVariacion','Variación'));
+</script></body></html>
